@@ -34,9 +34,9 @@ const basicFile: Flow.File = {
                             x: 240,
                             y: 128,
                         },
-                        connection: {
+                        connections: [{
                             nodeID: 'cjo45oi8700002a5pmpnxhfny',
-                        },
+                        }],
                     },
                     {
                         id: 'cjo45oi8700002a5pmpnxhfny',

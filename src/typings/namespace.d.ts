@@ -19,13 +19,13 @@ export namespace Flow {
 
     interface Screen extends Graphic {
         children: Layer[];
-        connection?: Connection;
+        connections?: Connection[];
         type: Type.Screen;
     }
 
     interface Image extends Graphic {
         children: Layer[];
-        connection?: Connection;
+        connections?: Connection[];
         type: Type.Image;
     }
 
@@ -48,7 +48,7 @@ export namespace Flow {
     }
 
     interface Shape extends Node {
-        connection?: Connection;
+        connections?: Connection[];
         size: Size;
         position: Point;
     }
