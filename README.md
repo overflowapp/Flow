@@ -1,6 +1,6 @@
 # Flow
 
-Flow contains the universal typings and basic layout of how a `.flow` file should be structured and defined.
+Flow contains the universal [typings](/src/typings/namespace.d.ts) and basic layout of how a `.flow` file should be structured and defined.
 
 ## Examples
 - [Minimal file](src/examples/minimalFile.ts) (the most minimal .flow data structure you could have)
