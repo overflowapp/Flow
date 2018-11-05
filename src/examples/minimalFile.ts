@@ -20,7 +20,11 @@ const minimalFile: Flow.File = {
             },
         ],
     },
-    settings: {},
+    settings: {
+        grid: null,
+        snapToGrid: false,
+        snapToObjects: false,
+    },
     schemaVersion: 1,
 };
 

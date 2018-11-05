@@ -4,7 +4,7 @@
   "typings": "index.d.ts",
   "license": "MIT",
   "scripts": {
-    "build": "tsc -p . && node ./build/Packager.js"
+    "build": "ts-node ./src/Packager.ts"
   },
   "devDependencies": {
     "@types/node": "^10.12.2",

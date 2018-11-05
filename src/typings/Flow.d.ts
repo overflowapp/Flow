@@ -1,3 +1,3 @@
-import { Flow } from './interface';
+import { Flow } from './namespace';
 
 export default Flow;

@@ -6,20 +6,21 @@ export namespace Flow {
             name: string;
             type: Type.Document;
         };
-        settings: {};
+        settings: Settings;
         schemaVersion: number;
     }
 
     interface Page extends Node {
         backgroundColor: Color;
-        children: (Screen | Image)[];
         type: Type.Page;
+        children: (Screen | Image)[];
+        startNodeID?: string;
     }
 
-    interface Graphic extends Node {
-        size: Size;
-        position: Point;
-        source: FileAsset | URLAsset;
+    interface Screen extends Graphic {
+        children: Layer[];
+        connection?: Connection;
+        type: Type.Screen;
     }
 
     interface Image extends Graphic {
@@ -28,10 +29,28 @@ export namespace Flow {
         type: Type.Image;
     }
 
-    interface Screen extends Graphic {
-        children: Layer[];
+    interface Graphic extends Node {
+        size: Size;
+        position: Point;
+        source: FileAsset | URLAsset;
+    }
+
+    interface Rectangle extends Shape {
+        type: Type.Rectangle;
+    }
+
+    interface Ellipse extends Shape {
+        type: Type.Ellipse;
+    }
+
+    interface Diamond extends Shape {
+        type: Type.Diamond;
+    }
+
+    interface Shape extends Node {
         connection?: Connection;
-        type: Type.Screen;
+        size: Size;
+        position: Point;
     }
 
     interface Layer extends Node {
@@ -52,6 +71,8 @@ export namespace Flow {
 
     interface Settings {
         grid: [number, number];
+        snapToGrid: boolean;
+        snapToObjects: boolean;
     }
 
     interface Color {
@@ -69,10 +90,13 @@ export namespace Flow {
     type URLAsset = string;
 
     const enum Type {
-        Document = 'Document',
+        Document = 'DOCUMENT',
         Page = 'PAGE',
         Screen = 'SCREEN',
         Image = 'IMAGE',
+        Rectangle = 'RECT',
+        Ellipse = 'ELLIPSE',
+        Diamond = 'DIAMOND',
         Hotspot = 'HOTSPOT',
         Layer = 'LAYER',
     }
@@ -87,7 +111,3 @@ export namespace Flow {
         w: number;
     }
 }
-
-// declare module "Flow" {
-//     export = Flow;
-// }

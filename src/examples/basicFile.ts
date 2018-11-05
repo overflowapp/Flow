@@ -3,7 +3,7 @@ import Flow from '../typings/Flow';
 const basicFile: Flow.File = {
     document: {
         id: 'cjo45613k00002a5p9gj6nr3b',
-        name: 'Sample Document',
+        name: 'Basic Document',
         type: Flow.Type.Document,
         children: [
             {
@@ -22,8 +22,8 @@ const basicFile: Flow.File = {
                         name: 'Sign in',
                         type: Flow.Type.Screen,
                         source: {
-                            fileName: 'sign-in.webp',
-                            dirPath: 'assets',
+                            fileName: 'sign-in.png',
+                            dirPath: './assets',
                         },
                         children: [],
                         size: {
@@ -40,8 +40,8 @@ const basicFile: Flow.File = {
                         name: 'Sign up',
                         type: Flow.Type.Screen,
                         source: {
-                            fileName: 'sign-up.webp',
-                            dirPath: 'assets',
+                            fileName: 'sign-up.png',
+                            dirPath: './assets',
                         },
                         children: [],
                         size: {
@@ -57,7 +57,11 @@ const basicFile: Flow.File = {
             },
         ],
     },
-    settings: {},
+    settings: {
+        grid: [40, 40],
+        snapToGrid: true,
+        snapToObjects: true,
+    },
     schemaVersion: 1,
 };
 

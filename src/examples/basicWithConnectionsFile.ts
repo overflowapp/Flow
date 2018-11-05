@@ -22,7 +22,7 @@ const basicFile: Flow.File = {
                         name: 'Sign in',
                         type: Flow.Type.Screen,
                         source: {
-                            fileName: 'sign-in.webp',
+                            fileName: 'sign-in.png',
                             dirPath: 'assets',
                         },
                         children: [],
@@ -43,7 +43,7 @@ const basicFile: Flow.File = {
                         name: 'Sign up',
                         type: Flow.Type.Screen,
                         source: {
-                            fileName: 'sign-up.webp',
+                            fileName: 'sign-up.png',
                             dirPath: 'assets',
                         },
                         children: [],
@@ -60,7 +60,11 @@ const basicFile: Flow.File = {
             },
         ],
     },
-    settings: {},
+    settings: {
+        grid: [40, 40],
+        snapToGrid: true,
+        snapToObjects: true,
+    },
     schemaVersion: 1,
 };
 
