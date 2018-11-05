@@ -1,18 +1,18 @@
-declare namespace Flow {
+export namespace Flow {
     interface File {
         document: {
             id: string;
             children: Page[];
             name: string;
             type: Type.Document;
-        }
+        };
         settings: {};
         schemaVersion: number;
     }
 
     interface Page extends Node {
         backgroundColor: Color;
-        children: Screen[] | Image[];
+        children: (Screen | Image)[];
         type: Type.Page;
     }
 
@@ -61,15 +61,6 @@ declare namespace Flow {
         a: number;
     }
 
-    enum Type {
-        'Document' = 'Document',
-        'Page' = 'PAGE',
-        'Screen' = 'SCREEN',
-        'Image' = 'IMAGE',
-        'Hotspot' = 'HOTSPOT',
-        'Layer' = 'LAYER',
-    }
-
     interface FileAsset {
         fileName: string;
         dirPath: string;
@@ -77,15 +68,26 @@ declare namespace Flow {
 
     type URLAsset = string;
 
+    const enum Type {
+        Document = 'Document',
+        Page = 'PAGE',
+        Screen = 'SCREEN',
+        Image = 'IMAGE',
+        Hotspot = 'HOTSPOT',
+        Layer = 'LAYER',
+    }
+
     interface Point {
         x: number;
         y: number;
     }
-    
+
     interface Size {
         h: number;
         w: number;
     }
 }
 
-export default Flow;
+// declare module "Flow" {
+//     export = Flow;
+// }

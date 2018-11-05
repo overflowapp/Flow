@@ -2,24 +2,23 @@
     "compilerOptions": {
         "module": "commonjs",
         "lib": [
-            "es6",
+            "es2015",
             "dom"
         ],
-      "experimentalDecorators": true,
+        "preserveConstEnums": true,
+        "removeComments": true,
       "moduleResolution": "node",
       "noImplicitAny": true,
-      "preserveConstEnums": true,
-      "pretty": true,
-      "removeComments": false,
-      "sourceMap": false,
-      "suppressImplicitAnyIndexErrors": true,
-      "forceConsistentCasingInFileNames": true,
-      "allowSyntheticDefaultImports": true,
+      "baseUrl": ".",
       "importHelpers": true,
       "outDir": "build",
-      "target": "es6",
-      "resolveJsonModule": true
+      "target": "es5",
+      "resolveJsonModule": true,
+      "sourceMap": true,
     },
-    "exclude": ["node_modules"]
+    "exclude": [
+      "node_modules",
+      "build"
+    ]
 }
   
