@@ -13,7 +13,7 @@ export namespace Flow {
     interface Page extends Node {
         backgroundColor: Color;
         type: Type.Page;
-        children: (Screen | Image)[];
+        children: (Screen | Image | Rectangle | Ellipse | Diamond)[];
         startNodeID?: string;
     }
 
