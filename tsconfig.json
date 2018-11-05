@@ -1,0 +1,25 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "lib": [
+            "es6",
+            "dom"
+        ],
+      "experimentalDecorators": true,
+      "moduleResolution": "node",
+      "noImplicitAny": true,
+      "preserveConstEnums": true,
+      "pretty": true,
+      "removeComments": false,
+      "sourceMap": false,
+      "suppressImplicitAnyIndexErrors": true,
+      "forceConsistentCasingInFileNames": true,
+      "allowSyntheticDefaultImports": true,
+      "importHelpers": true,
+      "outDir": "build",
+      "target": "es6",
+      "resolveJsonModule": true
+    },
+    "exclude": ["node_modules"]
+}
+  
