@@ -24,9 +24,9 @@ export namespace Flow {
     }
 
     interface Image extends Graphic {
+        type: Type.Image;
         children: Layer[];
         connections?: Connection[];
-        type: Type.Image;
     }
 
     interface Graphic extends Node {
@@ -48,15 +48,16 @@ export namespace Flow {
     }
 
     interface Shape extends Node {
-        connections?: Connection[];
         size: Size;
         position: Point;
+        connections?: Connection[];
     }
 
     interface Layer extends Node {
+        type: Type.Layer | Type.Hotspot;
         size: Size;
         position: Point;
-        type: Type.Layer | Type.Hotspot;
+        connections?: Connection[];
     }
 
     interface Node {

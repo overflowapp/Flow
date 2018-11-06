@@ -2,7 +2,7 @@ import * as JSZip from 'jszip';
 import * as fs from 'fs';
 import * as path from 'path';
 import Flow from './typings/Flow';
-import basicFile from './examples/basicFile';
+import basicFileWithConnections from './examples/basicFileWithConnections';
 
 export default class Packager {
     public static package(file: Flow.File) {
@@ -31,4 +31,4 @@ export default class Packager {
     }
 }
 
-Packager.package(basicFile);
+Packager.package(basicFileWithConnections);

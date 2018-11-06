@@ -27,11 +27,11 @@ const basicFile: Flow.File = {
                         },
                         children: [],
                         size: {
-                            h: 675,
-                            w: 375,
+                            h: 700,
+                            w: 1152,
                         },
                         position: {
-                            x: 240,
+                            x: 200,
                             y: 128,
                         },
                     },
@@ -45,11 +45,11 @@ const basicFile: Flow.File = {
                         },
                         children: [],
                         size: {
-                            h: 675,
-                            w: 375,
+                            h: 700,
+                            w: 1152,
                         },
                         position: {
-                            x: 240,
+                            x: 1452,
                             y: 128,
                         },
                     },
