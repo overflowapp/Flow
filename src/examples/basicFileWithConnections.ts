@@ -1,4 +1,4 @@
-import Flow from 'src/typings/Flow';
+import Flow from '../typings/Flow';
 
 const basicFile: Flow.File = {
     document: {
