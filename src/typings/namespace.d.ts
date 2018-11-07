@@ -7,7 +7,7 @@ export namespace Flow {
             type: Type.Document;
         };
         settings: Settings;
-        schemaVersion: number;
+        schemaVersion: SchemaVersion;
     }
 
     interface Page extends Node {
@@ -71,9 +71,7 @@ export namespace Flow {
     }
 
     interface Settings {
-        grid: [number, number];
-        snapToGrid: boolean;
-        snapToObjects: boolean;
+        grid?: [number, number];
     }
 
     interface Color {
@@ -111,4 +109,6 @@ export namespace Flow {
         h: number;
         w: number;
     }
+
+    type SchemaVersion = 1;
 }

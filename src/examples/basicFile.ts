@@ -59,8 +59,6 @@ const basicFile: Flow.File = {
     },
     settings: {
         grid: [40, 40],
-        snapToGrid: true,
-        snapToObjects: true,
     },
     schemaVersion: 1,
 };
