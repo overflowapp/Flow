@@ -5,7 +5,7 @@ Flow contains the universal [typings](/src/typings/namespace.d.ts) and basic lay
 ## Examples
 - [Minimal file](src/examples/minimalFile.ts) (the most minimal .flow data structure you could have)
 - [Basic file](src/examples/basicFile.ts) (a data structure containing Screens and settings)
-- [Basic file with Connections](src/examples/basicFile.ts) (a data structure containing Screens connections to other nodes)
+- [Basic file with Connections](src/examples/basicFileWithConnections.ts) (a data structure containing Screens connections to other nodes)
 
 
 ## Building a `.flow` file from the Basic structure
