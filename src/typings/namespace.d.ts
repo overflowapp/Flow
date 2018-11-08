@@ -2,37 +2,30 @@ export namespace Flow {
     interface File {
         document: {
             id: string;
-            children: Page[];
             name: string;
             type: Type.Document;
+            children: Page[];
         };
         settings: Settings;
         schemaVersion: SchemaVersion;
     }
 
     interface Page extends Node {
-        backgroundColor: Color;
         type: Type.Page;
         children: (Screen | Image | Rectangle | Ellipse | Diamond)[];
+        backgroundColor: Color;
         startNodeID?: string;
     }
 
     interface Screen extends Graphic {
+        type: Type.Screen;
         children: Layer[];
         connections?: Connection[];
-        type: Type.Screen;
     }
 
     interface Image extends Graphic {
         type: Type.Image;
-        children: Layer[];
         connections?: Connection[];
-    }
-
-    interface Graphic extends Node {
-        size: Size;
-        position: Point;
-        source: FileAsset | URLAsset;
     }
 
     interface Rectangle extends Shape {
@@ -47,23 +40,11 @@ export namespace Flow {
         type: Type.Diamond;
     }
 
-    interface Shape extends Node {
-        size: Size;
-        position: Point;
-        connections?: Connection[];
-    }
-
     interface Layer extends Node {
         type: Type.Layer | Type.Hotspot;
-        size: Size;
         position: Point;
+        size: Size;
         connections?: Connection[];
-    }
-
-    interface Node {
-        id: string;
-        name: string;
-        type: Type;
     }
 
     interface Connection {
@@ -88,6 +69,16 @@ export namespace Flow {
 
     type URLAsset = string;
 
+    interface Point {
+        x: number;
+        y: number;
+    }
+
+    interface Size {
+        h: number;
+        w: number;
+    }
+
     const enum Type {
         Document = 'DOCUMENT',
         Page = 'PAGE',
@@ -100,15 +91,23 @@ export namespace Flow {
         Layer = 'LAYER',
     }
 
-    interface Point {
-        x: number;
-        y: number;
-    }
-
-    interface Size {
-        h: number;
-        w: number;
-    }
-
     type SchemaVersion = 1;
+}
+
+interface Node {
+    id: string;
+    name: string;
+    type: Flow.Type;
+}
+
+interface Shape extends Node {
+    position: Flow.Point;
+    size: Flow.Size;
+    connections?: Flow.Connection[];
+}
+
+interface Graphic extends Node {
+    position: Flow.Point;
+    size: Flow.Size;
+    source: Flow.FileAsset | Flow.URLAsset;
 }
