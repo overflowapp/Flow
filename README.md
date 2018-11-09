@@ -14,3 +14,30 @@ Flow contains the universal [typings](/src/typings/namespace.d.ts) and basic lay
 2. `cd Flow`
 3.  `yarn`
 4.  `yarn run build` to build a .flow file
+
+## Private Node Types
+
+### `Node`
+
+| Property  | Type | Description |
+| :--- | :--- | :--- |
+| **id**  | `string` | A unique identifier for the node in the Document |
+| **name**  | `string` | A non-unique identifier for the node in the Document |
+| **type**  | `NodeType` | One of `NodeType` that declares what type of Node it is |
+
+
+### `Shape extends Node`
+
+| Property  | Type | Description |
+| :--- | :--- | :--- |
+| **position**  | `Flow.Point` | A unique identifier for the node in the Document |
+| **size**  | `Flow.Size` | A non-unique identifier for the node in the Document |
+| **connections**  | `Flow.Connection[]` | One of `NodeType` that declares what type of Node it is |
+
+### `Graphic extends Node`
+
+| Property  | Type | Description |
+| :--- | :--- | :--- |
+| **position**  | `Flow.Point` | A unique identifier for the node in the Document |
+| **size**  | `Flow.Size` | A non-unique identifier for the node in the Document |
+| **source**  | `Flow.FileAsset` or `Flow.URLAsset` | One of `NodeType` that declares what type of Node it is |
