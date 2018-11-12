@@ -1,12 +1,12 @@
 {
   "name": "flow",
   "private": true,
-  "version": "1.0.3",
+  "version": "1.0.4",
   "license": "MIT",
   "scripts": {
     "build": "ts-node ./src/Packager.ts",
     "version": "changelog",
-    "release": "np --contents package"
+    "release": "np --contents package --yolo"
   },
   "devDependencies": {
     "@types/jszip": "^3.1.4",
