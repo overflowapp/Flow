@@ -20,6 +20,7 @@
   ],
   "scripts": {
     "build": "ts-node ./src/Packager.ts",
+    "version": "changelog",
     "release": "np --yolo"
   },
   "devDependencies": {
