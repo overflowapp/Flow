@@ -1,11 +1,13 @@
 {
-  "name": "flowdoc",
-  "version": "1.0.0",
-  "typings": "index.d.ts",
+  "name": "dotflow",
+  "version": "1.0.1",
   "license": "MIT",
   "scripts": {
     "build": "ts-node ./src/Packager.ts"
   },
+  "files": [
+    "src/typings/index.d.ts"
+  ],
   "devDependencies": {
     "@types/jszip": "^3.1.4",
     "@types/node": "^10.12.2",
