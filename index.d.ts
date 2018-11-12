@@ -3,7 +3,7 @@ declare namespace Flow {
         document: {
             id: string;
             name: string;
-            type: NodeType.Document;
+            type: NodeType.DOCUMENT;
             children: Page[];
         };
         settings: Settings;
@@ -11,37 +11,37 @@ declare namespace Flow {
     }
 
     interface Page extends Node {
-        type: NodeType.Page;
+        type: NodeType.PAGE;
         children: (Screen | Image | Rectangle | Ellipse | Diamond)[];
         backgroundColor: Color;
         startNodeID?: string;
     }
 
     interface Screen extends Graphic {
-        type: NodeType.Screen;
+        type: NodeType.SCREEN;
         children: Layer[];
         connections?: Connection[];
     }
 
     interface Image extends Graphic {
-        type: NodeType.Image;
+        type: NodeType.IMAGE;
         connections?: Connection[];
     }
 
     interface Rectangle extends Shape {
-        type: NodeType.Rectangle;
+        type: NodeType.RECTANGLE;
     }
 
     interface Ellipse extends Shape {
-        type: NodeType.Ellipse;
+        type: NodeType.ELLIPSE;
     }
 
     interface Diamond extends Shape {
-        type: NodeType.Diamond;
+        type: NodeType.DIAMOND;
     }
 
     interface Layer extends Node {
-        type: NodeType.Layer | NodeType.Hotspot;
+        type: NodeType.LAYER | NodeType.HOTSPOT;
         position: Point;
         size: Size;
         connections?: Connection[];
@@ -101,15 +101,15 @@ interface Graphic extends Node {
 }
 
 export const enum NodeType {
-    Document = 'DOCUMENT',
-    Page = 'PAGE',
-    Screen = 'SCREEN',
-    Image = 'IMAGE',
-    Rectangle = 'RECT',
-    Ellipse = 'ELLIPSE',
-    Diamond = 'DIAMOND',
-    Hotspot = 'HOTSPOT',
-    Layer = 'LAYER',
+    DOCUMENT = 'DOCUMENT',
+    PAGE = 'PAGE',
+    SCREEN = 'SCREEN',
+    IMAGE = 'IMAGE',
+    RECTANGLE = 'RECT',
+    ELLIPSE = 'ELLIPSE',
+    DIAMOND = 'DIAMOND',
+    HOTSPOT = 'HOTSPOT',
+    LAYER = 'LAYER',
 }
 
 export default Flow;
