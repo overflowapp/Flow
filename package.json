@@ -5,7 +5,6 @@
   "license": "MIT",
   "scripts": {
     "build": "ts-node ./src/Packager.ts",
-    "version": "changelog",
     "release": "np --contents package --yolo"
   },
   "devDependencies": {
