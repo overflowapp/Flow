@@ -1,4 +1,4 @@
-import Flow, { NodeType } from 'dotflow';
+import Flow, { NodeType } from '../../index.d';
 
 const minimalFile: Flow.File = {
     document: {

@@ -1,7 +1,7 @@
 import * as JSZip from 'jszip';
 import * as fs from 'fs';
 import * as path from 'path';
-import Flow, { NodeType } from 'dotflow';
+import Flow, { NodeType } from '../index.d';
 import basicFileWithConnections from './examples/basicFileWithConnections';
 
 export default class Packager {
