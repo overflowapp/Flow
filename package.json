@@ -20,7 +20,7 @@
   ],
   "scripts": {
     "build": "ts-node ./src/Packager.ts",
-    "version": "changelog && git add CHANGELOG.md",
+    "version": "changelog && git add CHANGELOG.md && git commit -m chore: update changelog",
     "release": "np --yolo"
   },
   "devDependencies": {
