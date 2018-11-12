@@ -1,9 +1,9 @@
-export namespace Flow {
+declare namespace Flow {
     interface File {
         document: {
             id: string;
             name: string;
-            type: Type.Document;
+            type: NodeType.Document;
             children: Page[];
         };
         settings: Settings;
@@ -11,37 +11,37 @@ export namespace Flow {
     }
 
     interface Page extends Node {
-        type: Type.Page;
+        type: NodeType.Page;
         children: (Screen | Image | Rectangle | Ellipse | Diamond)[];
         backgroundColor: Color;
         startNodeID?: string;
     }
 
     interface Screen extends Graphic {
-        type: Type.Screen;
+        type: NodeType.Screen;
         children: Layer[];
         connections?: Connection[];
     }
 
     interface Image extends Graphic {
-        type: Type.Image;
+        type: NodeType.Image;
         connections?: Connection[];
     }
 
     interface Rectangle extends Shape {
-        type: Type.Rectangle;
+        type: NodeType.Rectangle;
     }
 
     interface Ellipse extends Shape {
-        type: Type.Ellipse;
+        type: NodeType.Ellipse;
     }
 
     interface Diamond extends Shape {
-        type: Type.Diamond;
+        type: NodeType.Diamond;
     }
 
     interface Layer extends Node {
-        type: Type.Layer | Type.Hotspot;
+        type: NodeType.Layer | NodeType.Hotspot;
         position: Point;
         size: Size;
         connections?: Connection[];
@@ -79,25 +79,13 @@ export namespace Flow {
         w: number;
     }
 
-    const enum Type {
-        Document = 'DOCUMENT',
-        Page = 'PAGE',
-        Screen = 'SCREEN',
-        Image = 'IMAGE',
-        Rectangle = 'RECT',
-        Ellipse = 'ELLIPSE',
-        Diamond = 'DIAMOND',
-        Hotspot = 'HOTSPOT',
-        Layer = 'LAYER',
-    }
-
     type SchemaVersion = 1;
 }
 
 interface Node {
     id: string;
     name: string;
-    type: Flow.Type;
+    type: NodeType;
 }
 
 interface Shape extends Node {
@@ -111,3 +99,17 @@ interface Graphic extends Node {
     size: Flow.Size;
     source: Flow.FileAsset | Flow.URLAsset;
 }
+
+export const enum NodeType {
+    Document = 'DOCUMENT',
+    Page = 'PAGE',
+    Screen = 'SCREEN',
+    Image = 'IMAGE',
+    Rectangle = 'RECT',
+    Ellipse = 'ELLIPSE',
+    Diamond = 'DIAMOND',
+    Hotspot = 'HOTSPOT',
+    Layer = 'LAYER',
+}
+
+export default Flow;

@@ -132,6 +132,21 @@ diff@^3.1.0, diff@^3.2.0:
   resolved "https://registry.npmjs.org/diff/-/diff-3.5.0.tgz#800c0dd1e0a8bfbc95835c202ad220fe317e5a12"
   integrity sha512-A46qtFgd+g7pDZinpnwiRJtxbC1hpgf0uzP3iG89scHk0AUC7A1TGxf5OiiOUv/JMZR8GOt8hL900hV0bOy5xA==
 
+dotflow@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.npmjs.org/dotflow/-/dotflow-1.0.1.tgz#17b7d057b594aeb028df59e271231576adae85b2"
+  integrity sha512-+wYOVEam88ljP2flUEsdZ5SKQbrVjCAy2u4XkMg8oGxnFeCaxulRp8JOv5/irzoNZDOOXVU8LMUlVpd+y+6eww==
+  dependencies:
+    jszip "^3.1.5"
+
+dotflow@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.npmjs.org/dotflow/-/dotflow-1.0.2.tgz#34f8d850b8ee497176d666d0732bca577f6d10e3"
+  integrity sha512-hh6BMrpk3lEf9zPQze7kgJAGXLFvcuYGlcv6lDc473Ym/1Rctnp4yq0F4z4I76WJ7enwGwyw1psES+HJlNJjrw==
+  dependencies:
+    dotflow "^1.0.1"
+    jszip "^3.1.5"
+
 es6-promise@~3.0.2:
   version "3.0.2"
   resolved "http://registry.npmjs.org/es6-promise/-/es6-promise-3.0.2.tgz#010d5858423a5f118979665f46486a95c6ee2bb6"

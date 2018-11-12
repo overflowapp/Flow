@@ -1,0 +1,24 @@
+{
+  "name": "dotflow",
+  "version": "1.0.2",
+  "license": "MIT",
+  "homepage": "https://github.com/overflowapp/Flow",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/overflowapp/Flow.git"
+  },
+  "keywords": [
+    "flow",
+    "dotflow",
+    "flow format",
+    "flow extension",
+    "flow file extension"
+  ],
+  "typings": "./index.d.ts",
+  "files": [
+    "index.d.ts"
+  ],
+  "devDependencies": {
+    "typescript": "^2.4"
+  }
+}
