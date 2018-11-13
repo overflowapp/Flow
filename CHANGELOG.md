@@ -1,3 +1,11 @@
+## [Version 1.0.8](https://github.com/animify/Flow/releases/tag/v1.0.8) (2018-11-13)
+
+### Bug fixes
+
+- update NodeType to NODE_TYPE: [`7654bd9`](https://github.com/animify/Flow/commit/7654bd9)
+
+[...full changes](https://github.com/animify/Flow/compare/v1.0.7...v1.0.8)
+
 ## [Version 1.0.7](https://github.com/animify/Flow/releases/tag/v1.0.7) (2018-11-13)
 
 ### Bug fixes
