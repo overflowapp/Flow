@@ -21,7 +21,7 @@
   "scripts": {
     "build": "ts-node ./src/Packager.ts",
     "lint": "tslint -p . -c tslint.json",
-    "release": "changelog && git push --follow-tags && yarn publish --access public"
+    "release": "changelog && git push --follow-tags && yarn publish --access public --non-interactive"
   },
   "devDependencies": {
     "@types/jszip": "^3.1.4",
