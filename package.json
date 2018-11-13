@@ -1,6 +1,6 @@
 {
   "name": "dotflow",
-  "version": "1.0.5",
+  "version": "1.0.4",
   "license": "MIT",
   "homepage": "https://github.com/overflowapp/Flow",
   "repository": {
@@ -20,8 +20,8 @@
   ],
   "scripts": {
     "build": "ts-node ./src/Packager.ts",
-    "prepublishOnly": "changelog && git add CHANGELOG.md",
-    "release": "np --yolo --no-publish"
+    "changelog": "changelog",
+    "release": "np --yolo"
   },
   "devDependencies": {
     "@types/jszip": "^3.1.4",
