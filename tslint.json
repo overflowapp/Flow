@@ -4,6 +4,7 @@
     "rules" : {
         "quotemark": [true, "single"],
         "array-type": [true, "array"],
+        "no-namespace": [true, "allow-declarations"],
         "no-trailing-whitespace": false,
         "no-bitwise": false,
         "no-angle-bracket-type-assertion": true,

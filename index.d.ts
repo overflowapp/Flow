@@ -1,13 +1,15 @@
 declare namespace Flow {
     interface File {
-        document: {
-            id: string;
-            name: string;
-            type: NodeType.DOCUMENT;
-            children: Page[];
-        };
+        document: Document;
         settings: Settings;
         schemaVersion: SchemaVersion;
+    }
+
+    interface Document {
+        id: string;
+        name: string;
+        type: NodeType.DOCUMENT;
+        children: Page[];
     }
 
     interface Page extends Node {

@@ -66,7 +66,7 @@ const flowFile: Flow.File = {
 flowFile.settings = {};
 flowFile.schemaVersion = 1;
 
-const document: Flow.File['document'] = flowFile.document;
+const document: Flow.Document = flowFile.document;
 document.type = NodeType.DOCUMENT;
 
 const page: Flow.Page = document.children[0];

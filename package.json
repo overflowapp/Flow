@@ -21,7 +21,7 @@
   "scripts": {
     "build": "ts-node ./src/Packager.ts",
     "changelog": "changelog",
-    "lint": "tslint -p .",
+    "lint": "tslint -p . -c tslint.json",
     "release": "np --yolo"
   },
   "devDependencies": {
