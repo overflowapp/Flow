@@ -21,7 +21,7 @@
   "scripts": {
     "build": "ts-node ./src/Packager.ts",
     "prepublishOnly": "changelog && git add CHANGELOG.md",
-    "release": "np --yolo"
+    "release": "np --yolo --no-publish"
   },
   "devDependencies": {
     "@types/jszip": "^3.1.4",
