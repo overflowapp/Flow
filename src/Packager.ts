@@ -13,7 +13,7 @@ export default class Packager {
 
         file.document.children.forEach((page) => {
             page.children.forEach((node) => {
-                if (node.type === NodeType.Screen || node.type === NodeType.Image) {
+                if (node.type === NodeType.SCREEN || node.type === NodeType.IMAGE) {
                     const fileAsset = (node.source as Flow.FileAsset);
                     const filePath = `${fileAsset.dirPath}/${fileAsset.fileName}`;
                     const relativePath = path.join(__dirname, './examples/', filePath);
