@@ -1,3 +1,11 @@
+## [Version 1.0.6](https://github.com/animify/Flow/releases/tag/v1.0.6) (2018-11-13)
+
+### Bug fixes
+
+- moved Document type to its own interface: [`78dc3b6`](https://github.com/animify/Flow/commit/78dc3b6)
+
+[...full changes](https://github.com/animify/Flow/compare/v1.0.5...v1.0.6)
+
 ## [Version 1.0.3](https://github.com/animify/Flow/releases/tag/v1.0.3) (2018-11-12)
 
 ### Bug fixes
