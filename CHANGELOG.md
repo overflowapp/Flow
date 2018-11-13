@@ -1,3 +1,11 @@
+## [Version 1.0.7](https://github.com/animify/Flow/releases/tag/v1.0.7) (2018-11-13)
+
+### Bug fixes
+
+- remove URLAsset interface: [`3dc1086`](https://github.com/animify/Flow/commit/3dc1086)
+
+[...full changes](https://github.com/animify/Flow/compare/v1.0.6...v1.0.7)
+
 ## [Version 1.0.6](https://github.com/animify/Flow/releases/tag/v1.0.6) (2018-11-13)
 
 ### Bug fixes
