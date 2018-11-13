@@ -69,8 +69,6 @@ declare namespace Flow {
         dirPath: string;
     }
 
-    type URLAsset = string;
-
     interface Point {
         x: number;
         y: number;
@@ -99,7 +97,7 @@ interface Shape extends Node {
 interface Graphic extends Node {
     position: Flow.Point;
     size: Flow.Size;
-    source: Flow.FileAsset | Flow.URLAsset;
+    source: Flow.FileAsset;
 }
 
 export const enum NodeType {

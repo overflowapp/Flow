@@ -1,6 +1,6 @@
-import Flow, { NodeType } from '../index.d';
+import Flow, { NodeType } from '..';
 
-const flowFile: Flow.File = {
+const file: Flow.File = {
     document: {
         id: 'cjo45613k00002a5p9gj6nr3b',
         name: 'Basic Document',
@@ -63,10 +63,10 @@ const flowFile: Flow.File = {
     schemaVersion: 1,
 };
 
-flowFile.settings = {};
-flowFile.schemaVersion = 1;
+file.settings = {};
+file.schemaVersion = 1;
 
-const document: Flow.Document = flowFile.document;
+const document: Flow.Document = file.document;
 document.type = NodeType.DOCUMENT;
 
 const page: Flow.Page = document.children[0];
@@ -102,4 +102,8 @@ screen.children.push(hotspot);
 screen.position = {
     x: 0,
     y: 0,
+};
+screen.size = {
+    w: 375,
+    h: 667,
 };
