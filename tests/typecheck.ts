@@ -1,15 +1,15 @@
-import Flow, { NodeType } from '..';
+import Flow, { NODE_TYPE } from '..';
 
 const file: Flow.File = {
     document: {
         id: 'cjo45613k00002a5p9gj6nr3b',
         name: 'Basic Document',
-        type: NodeType.DOCUMENT,
+        type: NODE_TYPE.DOCUMENT,
         children: [
             {
                 id: 'cjo456d2700002a5p80zudiut',
                 name: 'Page 1',
-                type: NodeType.PAGE,
+                type: NODE_TYPE.PAGE,
                 backgroundColor: {
                     r: 0,
                     g: 0,
@@ -20,7 +20,7 @@ const file: Flow.File = {
                     {
                         id: 'cjo45mq7500002a5p8n8u1bfz',
                         name: 'Sign in',
-                        type: NodeType.SCREEN,
+                        type: NODE_TYPE.SCREEN,
                         source: {
                             fileName: 'sign-in.png',
                             dirPath: './assets',
@@ -38,7 +38,7 @@ const file: Flow.File = {
                     {
                         id: 'cjo45oi8700002a5pmpnxhfny',
                         name: 'Sign up',
-                        type: NodeType.SCREEN,
+                        type: NODE_TYPE.SCREEN,
                         source: {
                             fileName: 'sign-up.png',
                             dirPath: './assets',
@@ -67,10 +67,10 @@ file.settings = {};
 file.schemaVersion = 1;
 
 const document: Flow.Document = file.document;
-document.type = NodeType.DOCUMENT;
+document.type = NODE_TYPE.DOCUMENT;
 
 const page: Flow.Page = document.children[0];
-page.type = NodeType.PAGE;
+page.type = NODE_TYPE.PAGE;
 page.backgroundColor = {
     r: 255,
     g: 255,
@@ -81,7 +81,7 @@ page.backgroundColor = {
 const hotspot: Flow.Layer = {
     id: 'cjo5mezgg00003g5winhxc8o0',
     name: 'Layer',
-    type: NodeType.HOTSPOT,
+    type: NODE_TYPE.HOTSPOT,
     position: {
         x: 390,
         y: 390,
@@ -94,10 +94,10 @@ const hotspot: Flow.Layer = {
         nodeID: 'cjo45mq7500002a5p8n8u1bfz',
     }],
 };
-hotspot.type = NodeType.HOTSPOT;
+hotspot.type = NODE_TYPE.HOTSPOT;
 
 const screen = page.children[0] as Flow.Screen;
-screen.type = NodeType.SCREEN;
+screen.type = NODE_TYPE.SCREEN;
 screen.children.push(hotspot);
 screen.position = {
     x: 0,

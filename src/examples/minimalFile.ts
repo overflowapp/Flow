@@ -1,15 +1,15 @@
-import Flow, { NodeType } from '../../index.d';
+import Flow, { NODE_TYPE } from '../../index.d';
 
 const minimalFile: Flow.File = {
     document: {
         id: 'cjo45613k00002a5p9gj6nr3b',
         name: 'Sample Document',
-        type: NodeType.DOCUMENT,
+        type: NODE_TYPE.DOCUMENT,
         children: [
             {
                 id: 'cjo456d2700002a5p80zudiut',
                 name: 'Page 1',
-                type: NodeType.PAGE,
+                type: NODE_TYPE.PAGE,
                 backgroundColor: {
                     r: 0,
                     g: 0,

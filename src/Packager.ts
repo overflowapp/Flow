@@ -1,7 +1,7 @@
 import * as JSZip from 'jszip';
 import * as fs from 'fs';
 import * as path from 'path';
-import Flow, { NodeType } from '../index.d';
+import Flow, { NODE_TYPE } from '../index.d';
 import basicFileWithConnections from './examples/basicFileWithConnections';
 
 export default class Packager {
@@ -13,7 +13,7 @@ export default class Packager {
 
         file.document.children.forEach((page) => {
             page.children.forEach((node) => {
-                if (node.type === NodeType.SCREEN || node.type === NodeType.IMAGE) {
+                if (node.type === NODE_TYPE.SCREEN || node.type === NODE_TYPE.IMAGE) {
                     const fileAsset = (node.source as Flow.FileAsset);
                     const filePath = `${fileAsset.dirPath}/${fileAsset.fileName}`;
                     const relativePath = path.join(__dirname, './examples/', filePath);

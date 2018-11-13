@@ -8,42 +8,42 @@ declare namespace Flow {
     interface Document {
         id: string;
         name: string;
-        type: NodeType.DOCUMENT;
+        type: NODE_TYPE.DOCUMENT;
         children: Page[];
     }
 
     interface Page extends Node {
-        type: NodeType.PAGE;
+        type: NODE_TYPE.PAGE;
         children: (Screen | Image | Rectangle | Ellipse | Diamond)[];
         backgroundColor: Color;
         startNodeID?: string;
     }
 
     interface Screen extends Graphic {
-        type: NodeType.SCREEN;
+        type: NODE_TYPE.SCREEN;
         children: Layer[];
         connections?: Connection[];
     }
 
     interface Image extends Graphic {
-        type: NodeType.IMAGE;
+        type: NODE_TYPE.IMAGE;
         connections?: Connection[];
     }
 
     interface Rectangle extends Shape {
-        type: NodeType.RECTANGLE;
+        type: NODE_TYPE.RECTANGLE;
     }
 
     interface Ellipse extends Shape {
-        type: NodeType.ELLIPSE;
+        type: NODE_TYPE.ELLIPSE;
     }
 
     interface Diamond extends Shape {
-        type: NodeType.DIAMOND;
+        type: NODE_TYPE.DIAMOND;
     }
 
     interface Layer extends Node {
-        type: NodeType.LAYER | NodeType.HOTSPOT;
+        type: NODE_TYPE.LAYER | NODE_TYPE.HOTSPOT;
         position: Point;
         size: Size;
         connections?: Connection[];
@@ -85,7 +85,7 @@ declare namespace Flow {
 interface Node {
     id: string;
     name: string;
-    type: NodeType;
+    type: NODE_TYPE;
 }
 
 interface Shape extends Node {
@@ -100,7 +100,7 @@ interface Graphic extends Node {
     source: Flow.FileAsset;
 }
 
-export const enum NodeType {
+export const enum NODE_TYPE {
     DOCUMENT = 'DOCUMENT',
     PAGE = 'PAGE',
     SCREEN = 'SCREEN',
