@@ -21,7 +21,8 @@
   "scripts": {
     "build": "ts-node ./src/Packager.ts",
     "lint": "tslint -p . -c tslint.json",
-    "release": "changelog && git push --follow-tags && yarn publish --access public --non-interactive"
+    "release": "changelog && git push --follow-tags && yarn publish --access public --non-interactive",
+    "docs:dev": "parcel ./docs/index.html"
   },
   "devDependencies": {
     "@types/jszip": "^3.1.4",
@@ -29,6 +30,8 @@
     "changelog.md": "^1.1.0",
     "husky": "^1.1.3",
     "lint-staged": "^8.0.4",
+    "node-sass": "^4.10.0",
+    "parcel": "^1.10.3",
     "ts-node": "^7.0.1",
     "tslint": "^5.11.0",
     "typescript": "^3.1.6"
