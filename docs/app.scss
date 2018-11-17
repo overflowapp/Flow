@@ -11,8 +11,14 @@ body {
     margin: 0;
     font-family: "Assistant", sans-serif;
     line-height: 1.475;
+    font-size: 16px;
 }
 
 code {
     font-family: "Space Mono", monospace;
+    font-size: 15px;
+
+    span {
+        color: rgb(255, 0, 149);
+    }
 }
