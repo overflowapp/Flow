@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Assistant:400,600|Space+Mono");
+@import url("https://fonts.googleapis.com/css?family=Assistant:400,600|Roboto+Mono");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/tachyons/4.11.1/tachyons.min.css");
 
@@ -14,11 +14,54 @@ body {
     font-size: 16px;
 }
 
+body > .center {
+    padding: 64px 0;
+}
+
 code {
-    font-family: "Space Mono", monospace;
-    font-size: 15px;
+    font-family: "Roboto Mono", monospace;
+    font-size: 14px;
 
     span {
         color: rgb(255, 0, 149);
+    }
+}
+
+table.props {
+    text-align: left;
+
+    > thead {
+        th {
+            padding-bottom: 16px;
+            border-bottom: 1px solid #e1e1e1;
+        }
+    }
+
+    > tbody {
+        td {
+            padding: 16px 0;
+            vertical-align: top;
+
+            code {
+                display: flex;
+            }
+            code span {
+                padding: 2px 4px;
+                border-radius: 2px;
+                color: #6f00ff;
+                background-color: #6f00ff20;
+                margin-left: 8px;
+            }
+
+            p {
+                margin: 0;
+                padding: 8px 0;
+                color: #555;
+
+                + code {
+                    margin-top: 16px;
+                }
+            }
+        }
     }
 }

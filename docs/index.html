@@ -12,6 +12,36 @@
                 differentiate it amongst the rest.
             </p>
 
+            <table class="props w-100" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th width="200">Type</th>
+                        <th>Properties</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>Node</code></td>
+                        <td>
+                            <code>id <span>String</span></code>
+                            <p>The unique identifier for Nodes</p>
+
+                            <code>name <span>String</span></code>
+                            <p>
+                                A non-unique identifier for the node in the
+                                Document
+                            </p>
+
+                            <code>type <span>NODE_TYPE</span></code>
+                            <p>
+                                A type, from a const enum, that declares what
+                                kind of node it is
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
             <h2>Node Types</h2>
             <p>
                 Each Node has its own type and has a different hierarcy in the
@@ -20,19 +50,31 @@
                 properties as well as common properties.
             </p>
 
-            <table class="tl w-100" cellspacing="0">
+            <table class="props w-100" cellspacing="0">
                 <thead>
                     <tr>
-                        <th class="bb b--black-10 pb3">Type</th>
-                        <th class="bb b--black-10 pb3">Properties</th>
+                        <th width="200">Type</th>
+                        <th>Properties</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Node</td>
+                        <td><code>DOCUMENT</code></td>
                         <td>
                             <code>id <span>String</span></code>
-                            <p>The unique identifier for Nodes.</p>
+                            <p>The unique identifier for Nodes</p>
+
+                            <code>name <span>String</span></code>
+                            <p>
+                                A non-unique identifier for the node in the
+                                Document
+                            </p>
+
+                            <code>type <span>NODE_TYPE</span></code>
+                            <p>
+                                A type, from a const enum, that declares what
+                                kind of node it is
+                            </p>
                         </td>
                     </tr>
                 </tbody>
