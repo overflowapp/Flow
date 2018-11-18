@@ -4,6 +4,15 @@
         <link href="app.scss" rel="stylesheet" />
     </head>
     <body>
+        <main class="mw7 tc center">
+            <h1>Flow Docs</h1>
+            <h2>
+                The official documentation and typings for
+                <strong>.flow</strong>
+            </h2>
+            <div class="script"><code>npm i dotflow</code></div>
+            <div class="script"><code>yarn add dotflow</code></div>
+        </main>
         <div class="mw7 center">
             <h2>The Node</h2>
             <p>
@@ -23,10 +32,10 @@
                     <tr>
                         <td><code>Node</code></td>
                         <td>
-                            <code>id <span>String</span></code>
+                            <code>id <span>string</span></code>
                             <p>The unique identifier for Nodes</p>
 
-                            <code>name <span>String</span></code>
+                            <code>name <span>string</span></code>
                             <p>
                                 A non-unique identifier for the node in the
                                 Document
@@ -61,10 +70,10 @@
                     <tr>
                         <td><code>DOCUMENT</code></td>
                         <td>
-                            <code>id <span>String</span></code>
+                            <code>id <span>string</span></code>
                             <p>The unique identifier for Nodes</p>
 
-                            <code>name <span>String</span></code>
+                            <code>name <span>string</span></code>
                             <p>
                                 A non-unique identifier for the node in the
                                 Document
@@ -95,7 +104,10 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td><code>Color</code></td>
+                        <td>
+                            <code>Color</code>
+                            <p>A RGBA color object</p>
+                        </td>
                         <td>
                             <code>r <span>number</span></code>
                             <p>Red value, between 0 and 255</p>
@@ -108,6 +120,61 @@
 
                             <code>a <span>number</span></code>
                             <p>Alpha value, between 0 and 1</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <code>Point</code>
+                            <p>An absolute (x, y) point</p>
+                        </td>
+                        <td>
+                            <code>x <span>number</span></code>
+                            <p>The absolute X coordinate in the space</p>
+
+                            <code>y <span>number</span></code>
+                            <p>The absolute Y coordinate in the space</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <code>Size</code>
+                            <p>A size object</p>
+                        </td>
+                        <td>
+                            <code>w <span>number</span></code>
+                            <p>The width, in pixels</p>
+
+                            <code>h <span>number</span></code>
+                            <p>The height, in pixels</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <code>Connection</code>
+                            <p>A connection between nodes</p>
+                        </td>
+                        <td>
+                            <code>nodeID <span>string</span></code>
+                            <p>
+                                The id of the Node that the connection ends up
+                                at
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <code>FileAsset</code>
+                            <p>Name &amp; path of an asset</p>
+                        </td>
+                        <td>
+                            <code>fileName <span>string</span></code>
+                            <p>
+                                The name of the file, with the extension (e.g
+                                image.png)
+                            </p>
+
+                            <code>dirPath <span>string</span></code>
+                            <p>The relative path to the file</p>
                         </td>
                     </tr>
                 </tbody>

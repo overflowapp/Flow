@@ -15,7 +15,52 @@ body {
 }
 
 body > .center {
-    padding: 64px 0;
+    padding: 72px 0;
+}
+
+main {
+    .script {
+        display: flex;
+        justify-content: center;
+        + .script {
+            margin-top: 12px;
+        }
+    }
+
+    h1 {
+        font-size: 48px;
+        margin-bottom: 0;
+    }
+
+    h2 {
+        font-weight: 400;
+        margin-top: 4px;
+        margin-bottom: 36px;
+    }
+
+    code {
+        color: #fff;
+        background-color: #000;
+        padding: 4px 8px;
+        border-radius: 2px;
+        display: inline-flex;
+    }
+}
+
+h2 {
+    margin: 0;
+
+    + p {
+        margin-top: 8px;
+    }
+}
+
+p {
+    margin: 0;
+}
+
+strong {
+    font-weight: 600;
 }
 
 code {
@@ -28,39 +73,43 @@ code {
 }
 
 table.props {
+    margin: 40px 0;
     text-align: left;
 
     > thead {
         th {
-            padding-bottom: 16px;
+            padding-bottom: 12px;
             border-bottom: 1px solid #e1e1e1;
         }
     }
 
     > tbody {
         td {
-            padding: 16px 0;
+            padding: 20px 0;
             vertical-align: top;
 
             code {
                 display: flex;
             }
             code span {
-                padding: 2px 4px;
+                padding: 1px 4px;
+                font-size: 12px;
+                position: relative;
+                top: 1px;
                 border-radius: 2px;
                 color: #6f00ff;
-                background-color: #6f00ff20;
+                background-color: #6f00ff16;
                 margin-left: 8px;
             }
 
             p {
                 margin: 0;
-                padding: 4px 0;
+                padding: 4px 0 0 0;
                 color: #555;
                 font-size: 14px;
 
                 + code {
-                    margin-top: 16px;
+                    margin-top: 18px;
                 }
             }
         }
